@@ -60,8 +60,10 @@ def main() -> None:
     output_dir = script_dir.parent / OUTPUT
     print(
         tabulate(
-            table, headers=['Student', 'Average Grade'],
-            tablefmt='grid',
+            table, headers=['№', 'Student', 'Average Grade'],
+            tablefmt='pipe',
+            stralign='left',
+            numalign='center',
             showindex=range(1, len(table) + 1),
         ),
     )
