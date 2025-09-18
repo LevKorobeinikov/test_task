@@ -59,5 +59,6 @@
     docker run my-app
    ```
 
+## Резултат:
 ![Резултат](result_images/screen.png)
  
