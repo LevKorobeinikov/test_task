@@ -59,5 +59,5 @@
     docker run my-app
    ```
 
-![Резултат](result_images/Screenshot 2025-09-19 at 01.26.56.png)
+![Резултат](result_images/screen.png)
  
