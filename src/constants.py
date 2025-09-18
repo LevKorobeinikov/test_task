@@ -1,4 +1,6 @@
+AVERAGE_GRADE = 'Average Grade'
 CONFIG = '--config'
+CENTER = 'center'
 DESCRIPTION_FOR_PARSER = (
     'Обработка файлов с данными об успеваемости студентов.'
 )
@@ -9,10 +11,14 @@ HELP_FOR_FILES = 'Пути к CSV-файлам.'
 HELP_FOR_REPORT = 'Название отчёта.'
 INFO = 'INFO'
 LOGS = 'logs'
+LEFT = 'left'
 NO_DATA = 'Нет данных.'
+NUMBER = '№'
 OUTPUT = 'output'
+PIPE = 'pipe'
 REPORT = '--report'
 STDOUT = 'stdout'
+STUDENT = 'Student'
 STUDENT_NAME = 'student_name'
 STUDENT_PERFORMANCE = 'student-performance'
 TEST_INVALID_GRDE = """student_name,subject,teacher_name,date,grade

@@ -5,15 +5,21 @@ from pathlib import Path
 from tabulate import tabulate
 
 from src.constants import (
+    AVERAGE_GRADE,
+    CENTER,
     CONFIG,
     DESCRIPTION_FOR_PARSER,
     FILES,
     HELP_FOR_FILES,
     HELP_FOR_REPORT,
+    LEFT,
     LOGS,
     NO_DATA,
+    NUMBER,
     OUTPUT,
+    PIPE,
     REPORT,
+    STUDENT,
 )
 from src.data_parser import parse_csv_files
 from src.reports import REPORT_REGISTRY
@@ -60,10 +66,10 @@ def main() -> None:
     output_dir = script_dir.parent / OUTPUT
     print(
         tabulate(
-            table, headers=['№', 'Student', 'Average Grade'],
-            tablefmt='pipe',
-            stralign='left',
-            numalign='center',
+            table, headers=[NUMBER, STUDENT, AVERAGE_GRADE],
+            tablefmt=PIPE,
+            stralign=LEFT,
+            numalign=CENTER,
             showindex=range(1, len(table) + 1),
         ),
     )
