@@ -59,7 +59,11 @@ def main() -> None:
     table = [[name, f'{avg:.2f}'] for name, avg in report_data]
     output_dir = script_dir.parent / OUTPUT
     print(
-        tabulate(table, headers=['Student', 'Average Grade'], tablefmt='grid'),
+        tabulate(
+            table, headers=['Student', 'Average Grade'],
+            tablefmt='grid',
+            showindex=range(1, len(table) + 1),
+        ),
     )
     logging.info(
         f'Отчёт сохранён в: {save_csv(report_data, output_dir, args.report)}',
