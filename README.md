@@ -63,10 +63,11 @@
 ![Резултат](result_images/screen.png)
  
 ## Добавить новый локальный отчёт
-	1.	Создаёшь src/reports/teacher_performance.py.
-	2.	В нём ставишь 
+
+1.	Создаёшь src/reports/teacher_performance.py.
+2.	В нём ставишь 
    ```bach
    @register_report('teacher-performance') # и класс, реализующий generate.
    ``` 
-	3. load_reports() при следующем запуске импортирует модуль и зарегистрирует отчёт.
-   4. python -m src.main --files data.csv --report my-report 
+3. load_reports() при следующем запуске импортирует модуль и зарегистрирует отчёт.
+4. python -m src.main --files data.csv --report my-report 
