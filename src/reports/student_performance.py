@@ -1,8 +1,12 @@
 from statistics import mean
 from typing import List, Tuple
 
+from src.constants import STUDENT_PERFORMANCE
+from src.reports import BaseReport, register_report
 
-class StudentPerformanceReport:
+
+@register_report(STUDENT_PERFORMANCE)
+class StudentPerformanceReport(BaseReport):
     """Отчёт по успеваемости студентов.
     Cредняя оценка по всем предметам, сортировка по убыванию.
     """
@@ -11,18 +15,6 @@ class StudentPerformanceReport:
     def generate(
         student_grades: dict[str, list[int]],
     ) -> List[Tuple[str, float]]:
-        """Генерирует отчёт.
-
-        Args:
-            student_grades: {student_name: [grades]} из data_parser.
-
-        Returns:
-            List[(str, float)] — отсортированный список.
-
-        Notes:
-            Если у студента нет оценок, он исключается из отчёта.
-
-        """
         report_data = []
         for student, grades in student_grades.items():
             if grades:

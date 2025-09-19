@@ -22,12 +22,13 @@ from src.constants import (
     STUDENT,
 )
 from src.data_parser import parse_csv_files
-from src.reports import REPORT_REGISTRY
+from src.reports import REPORT_REGISTRY, load_reports
 from src.utils import save_csv, setup_logging
 
 
 def main() -> None:
     """Основаная функция."""
+    load_reports('src.reports')
     parser = argparse.ArgumentParser(
         description=DESCRIPTION_FOR_PARSER,
     )

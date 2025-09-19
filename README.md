@@ -49,16 +49,24 @@
    ```
 
 4. Запуск скрипта:
-    ```bach
+   ```bach
    python -m src.main --files data/students1.csv data/students2.csv --report student-performance
    ```
 
 5. Альтернативный запуск, через Docker:
-    ```bach
-    docker build -t my-app .
-    docker run my-app
+   ```bach
+   docker build -t my-app .
+   docker run my-app
    ```
 
 ## Резултат:
 ![Резултат](result_images/screen.png)
  
+## Добавить новый локальный отчёт
+	1.	Создаёшь src/reports/teacher_performance.py.
+	2.	В нём ставишь 
+   ```bach
+   @register_report('teacher-performance') # и класс, реализующий generate.
+   ``` 
+	3. load_reports() при следующем запуске импортирует модуль и зарегистрирует отчёт.
+   4. python -m src.main --files data.csv --report my-report 
